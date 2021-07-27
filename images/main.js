@@ -69,7 +69,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load('/city.jpg');
+const jeffTexture = new THREE.TextureLoader().load('/images/city.jpg');
 
 const jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 60, 1000,30,15,70,700), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
@@ -77,7 +77,7 @@ scene.add(jeff);
 
 // Avatar2
 
-const meteTexture = new THREE.TextureLoader().load('/ground.jpg');
+const meteTexture = new THREE.TextureLoader().load('/images/ground.jpg');
 
 const mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50,300), new THREE.MeshBasicMaterial({ map: meteTexture }));
 
@@ -85,7 +85,7 @@ scene.add(mete);
 
 // Avatar 3
 
-const planetxTexture = new THREE.TextureLoader().load('/purpple.jpg');
+const planetxTexture = new THREE.TextureLoader().load('/images/purpple.jpg');
 
 const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 1000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
 
@@ -93,8 +93,8 @@ scene.add(planetx);
 
 //Avatar 4
 
-const planetzTexture = new THREE.TextureLoader().load('/mapamundi.png');
-const cloudsTexture = new THREE.TextureLoader().load('/space.jpg');
+const planetzTexture = new THREE.TextureLoader().load('../images/mapamundi.png');
+const cloudsTexture = new THREE.TextureLoader().load('space.jpg');
 
 const planetz = new THREE.Mesh(
   new THREE.SphereGeometry(23,56,85),
@@ -109,8 +109,8 @@ scene.add(planetz);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('../images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('../images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
