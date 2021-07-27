@@ -1,7 +1,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { IntAttribute } from 'three';
+import { Int8Attribute } from 'three';
 
 // Setup
 
@@ -64,7 +64,7 @@ Array(200).fill().forEach(addstar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
