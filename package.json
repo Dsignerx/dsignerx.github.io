@@ -10,7 +10,6 @@
     "vite": "^2.3.0"
   },
   "dependencies": {
-    "http-serve": "^1.0.1",
     "three": "^0.128.0"
   },
   "main": "main.js",
