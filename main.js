@@ -93,7 +93,7 @@ scene.add(planetx);
 
 //Avatar 4
 
-const planetzTexture = new THREE.TextureLoader().load('../../images/mapamundi.png');
+const planetzTexture = new THREE.TextureLoader().load('../images/mapamundi.png');
 const cloudsTexture = new THREE.TextureLoader().load('space.jpg');
 
 const planetz = new THREE.Mesh(
