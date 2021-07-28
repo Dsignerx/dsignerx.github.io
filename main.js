@@ -2,7 +2,6 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Int8Attribute } from 'three';
-import * .jpg from 'dsignerx.github.io/';
 
 // Setup
 
