@@ -2,10 +2,10 @@
   "name": "three-demo",
   "version": "0.0.0",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel index.html",
     "build": "vite build",
     "serve": "vite preview",
-    "pro":"parcel build src/index.html"
+    "pro":"parcel build index.html"
     
   },
   "devDependencies": {
