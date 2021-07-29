@@ -5,7 +5,7 @@ import { Int8Attribute } from 'three';
 
 // Setup
 
-const scene = new THREE.Scene();
+const scene = new THREE.Scene(); 
 
 const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
 
