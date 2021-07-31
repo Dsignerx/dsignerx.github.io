@@ -23,7 +23,7 @@ renderer.render(scene, camera);
 // Torus
 
 const geometry = new THREE.TorusGeometry( 25, 2, 16, 100, 7, 25);
-const material = new THREE.PointsMaterial({ size : 0.005});
+const material = new THREE.PointsMaterial({ size : 0.015});
 const torus = new THREE.Points(geometry, material);
 
 scene.add(torus);
@@ -40,8 +40,12 @@ pointLight.position.set(15,150,55);
 const pointLight3 = new THREE.PointLight(0x070707);
 pointLight.position.set(65,35,15);
 
+const pointLight4 = new THREE.PointLight(0x3200fe);
+pointLight4.position.set(95,55,55);
+
+
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight, pointLight2, pointLight3);
+scene.add(pointLight, ambientLight, pointLight2, pointLight3,pointLight4);
 
 // Helpers
 

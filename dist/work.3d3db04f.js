@@ -36944,7 +36944,7 @@ renderer.render(scene, camera); // Torus
 
 var geometry = new THREE.TorusGeometry(25, 2, 16, 100, 7, 25);
 var material = new THREE.PointsMaterial({
-  size: 0.005
+  size: 0.015
 });
 var torus = new THREE.Points(geometry, material);
 scene.add(torus); // Lights
@@ -36955,8 +36955,10 @@ var pointLight2 = new THREE.PointLight(0xff0000);
 pointLight.position.set(15, 150, 55);
 var pointLight3 = new THREE.PointLight(0x070707);
 pointLight.position.set(65, 35, 15);
+var pointLight4 = new THREE.PointLight(0x3200fe);
+pointLight4.position.set(95, 55, 55);
 var ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight, pointLight2, pointLight3); // Helpers
+scene.add(pointLight, ambientLight, pointLight2, pointLight3, pointLight4); // Helpers
 // const lightHelper = new THREE.PointLightHelper(pointLight)
 // const gridHelper = new THREE.GridHelper(200, 50);
 // scene.add(lightHelper, gridHelper)
@@ -37096,7 +37098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56255" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51777" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

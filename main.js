@@ -31,11 +31,21 @@ scene.add(torus);
 
 // Lights
 
-const pointLight = new THREE.PointLight(0xffffff);
+const pointLight = new THREE.PointLight(0x00d1ff);
 pointLight.position.set(5,55,15);
 
+const pointLight2 = new THREE.PointLight(0xff0000);
+pointLight.position.set(15,150,55);
+
+const pointLight3 = new THREE.PointLight(0x070707);
+pointLight.position.set(65,35,15);
+
+const pointLight4 = new THREE.PointLight(0x3200fe);
+pointLight4.position.set(95,55,55);
+
+
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+scene.add(pointLight, ambientLight, pointLight2, pointLight3,pointLight4);
 
 // Helpers
 
@@ -64,12 +74,12 @@ Array(200).fill().forEach(addstar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/background.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/backgroundff.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load('/city.jpg');
+const jeffTexture = new THREE.TextureLoader().load('/planetaz.jpg');
 
 const jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 60, 1000,30,15,70,700), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
@@ -77,7 +87,7 @@ scene.add(jeff);
 
 // Avatar2
 
-const meteTexture = new THREE.TextureLoader().load('/ground.jpg');
+const meteTexture = new THREE.TextureLoader().load('/planetax.jpg');
 
 const mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50,300), new THREE.MeshBasicMaterial({ map: meteTexture }));
 
@@ -85,9 +95,9 @@ scene.add(mete);
 
 // Avatar 3
 
-const planetxTexture = new THREE.TextureLoader().load('/purpple.jpg');
+const planetxTexture = new THREE.TextureLoader().load('/city.jpg');
 
-const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 1000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
+const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 2000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
 
 scene.add(planetx);
 
@@ -105,6 +115,15 @@ const planetz = new THREE.Mesh(
 );
 
 scene.add(planetz);
+
+// Avatar5
+
+const obsTexture = new THREE.TextureLoader().load('/ground.jpg');
+
+const obs = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 3000), new THREE.MeshBasicMaterial({ map: obsTexture }));
+
+scene.add(obs);
+
 
 
 // Moon
@@ -134,9 +153,21 @@ mete.position.x = 50;
 
 planetx.position.z = -105;
 planetx.position.x = 110;
+planetx.position.y = 1
+
+/**jeff.position.z = -5.5;
+jeff.position.x = 1;
+jeff.position.y = 1;
+planetx.position.z = -105;
+planetx.position.x = 110;
+**/
 
 planetz.position.z = 200;
 planetz.position.x = -58; 
+
+obs.position.z = 110;
+obs.position.x = -78;
+
 
 
 

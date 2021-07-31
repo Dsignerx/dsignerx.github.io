@@ -36949,10 +36949,16 @@ var material = new THREE.PointsMaterial({
 var torus = new THREE.Points(geometry, material);
 scene.add(torus); // Lights
 
-var pointLight = new THREE.PointLight(0xffffff);
+var pointLight = new THREE.PointLight(0x00d1ff);
 pointLight.position.set(5, 55, 15);
+var pointLight2 = new THREE.PointLight(0xff0000);
+pointLight.position.set(15, 150, 55);
+var pointLight3 = new THREE.PointLight(0x070707);
+pointLight.position.set(65, 35, 15);
+var pointLight4 = new THREE.PointLight(0x3200fe);
+pointLight4.position.set(95, 55, 55);
 var ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight); // Helpers
+scene.add(pointLight, ambientLight, pointLight2, pointLight3, pointLight4); // Helpers
 // const lightHelper = new THREE.PointLightHelper(pointLight)
 // const gridHelper = new THREE.GridHelper(200, 50);
 // scene.add(lightHelper, gridHelper)
@@ -36979,23 +36985,23 @@ function addstar() {
 
 Array(200).fill().forEach(addstar); // Background
 
-var spaceTexture = new THREE.TextureLoader().load('/background.jpg');
+var spaceTexture = new THREE.TextureLoader().load('/backgroundff.jpg');
 scene.background = spaceTexture; // Avatar
 
-var jeffTexture = new THREE.TextureLoader().load('/city.jpg');
+var jeffTexture = new THREE.TextureLoader().load('/planetaz.jpg');
 var jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 60, 1000, 30, 15, 70, 700), new THREE.MeshBasicMaterial({
   map: jeffTexture
 }));
 scene.add(jeff); // Avatar2
 
-var meteTexture = new THREE.TextureLoader().load('/ground.jpg');
+var meteTexture = new THREE.TextureLoader().load('/planetax.jpg');
 var mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50, 300), new THREE.MeshBasicMaterial({
   map: meteTexture
 }));
 scene.add(mete); // Avatar 3
 
-var planetxTexture = new THREE.TextureLoader().load('/purpple.jpg');
-var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 1000, 60, 15, 70, 700), new THREE.MeshBasicMaterial({
+var planetxTexture = new THREE.TextureLoader().load('/city.jpg');
+var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 2000, 60, 15, 70, 700), new THREE.MeshBasicMaterial({
   map: planetxTexture
 }));
 scene.add(planetx); //Avatar 4
@@ -37006,7 +37012,13 @@ var planetz = new THREE.Mesh(new THREE.SphereGeometry(23, 56, 85), new THREE.Mes
   map: planetzTexture,
   cloudsMap: cloudsTexture
 }));
-scene.add(planetz); // Moon
+scene.add(planetz); // Avatar5
+
+var obsTexture = new THREE.TextureLoader().load('/ground.jpg');
+var obs = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 3000), new THREE.MeshBasicMaterial({
+  map: obsTexture
+}));
+scene.add(obs); // Moon
 
 var moonTexture = new THREE.TextureLoader().load('/moon.jpg');
 var normalTexture = new THREE.TextureLoader().load('/normal.jpg');
@@ -37024,8 +37036,18 @@ mete.position.z = -75;
 mete.position.x = 50;
 planetx.position.z = -105;
 planetx.position.x = 110;
+planetx.position.y = 1;
+/**jeff.position.z = -5.5;
+jeff.position.x = 1;
+jeff.position.y = 1;
+planetx.position.z = -105;
+planetx.position.x = 110;
+**/
+
 planetz.position.z = 200;
-planetz.position.x = -58; // Scroll Animation
+planetz.position.x = -58;
+obs.position.z = 110;
+obs.position.x = -78; // Scroll Animation
 
 function moveCamera() {
   var t = document.body.getBoundingClientRect().top;
@@ -37092,7 +37114,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56255" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51777" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
