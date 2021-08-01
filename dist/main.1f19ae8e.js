@@ -37001,7 +37001,7 @@ var mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50, 300), new
 scene.add(mete); // Avatar 3
 
 var planetxTexture = new THREE.TextureLoader().load('/city.jpg');
-var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 2000, 60, 15, 70, 700), new THREE.MeshBasicMaterial({
+var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(6, 6, 20, 6), new THREE.MeshBasicMaterial({
   map: planetxTexture
 }));
 scene.add(planetx); //Avatar 4
@@ -37015,10 +37015,16 @@ var planetz = new THREE.Mesh(new THREE.SphereGeometry(23, 56, 85), new THREE.Mes
 scene.add(planetz); // Avatar5
 
 var obsTexture = new THREE.TextureLoader().load('/ground.jpg');
-var obs = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 3000), new THREE.MeshBasicMaterial({
+var obs = new THREE.Mesh(new THREE.TorusKnotGeometry(2, 2, 10, 10), new THREE.MeshBasicMaterial({
   map: obsTexture
 }));
-scene.add(obs); // Moon
+scene.add(obs); //avatar6
+
+var pedTextured = new THREE.TextureLoader().load('ground.jpg');
+var ped = new THREE.Mesh(new THREE.TorusKnotGeometry(2, 2, 13, 10), new THREE.MeshBasicMaterial({
+  map: obsTexture
+}));
+scene.add(ped); // Moon
 
 var moonTexture = new THREE.TextureLoader().load('/moon.jpg');
 var normalTexture = new THREE.TextureLoader().load('/normal.jpg');
@@ -37034,9 +37040,9 @@ jeff.position.x = 1;
 jeff.position.y = 1;
 mete.position.z = -75;
 mete.position.x = 50;
-planetx.position.z = -105;
-planetx.position.x = 110;
-planetx.position.y = 1;
+planetx.position.z = -100;
+planetx.position.x = 100;
+planetx.position.y = 5;
 /**jeff.position.z = -5.5;
 jeff.position.x = 1;
 jeff.position.y = 1;
@@ -37046,8 +37052,10 @@ planetx.position.x = 110;
 
 planetz.position.z = 200;
 planetz.position.x = -58;
-obs.position.z = 110;
-obs.position.x = -78; // Scroll Animation
+obs.position.z = 57;
+obs.position.x = -48;
+ped.position.z = 95;
+ped.position.x = -34; // Scroll Animation
 
 function moveCamera() {
   var t = document.body.getBoundingClientRect().top;
@@ -37062,6 +37070,12 @@ function moveCamera() {
   planetx.rotation.z += 0.01;
   planetz.rotation.y += 0.02;
   planetz.rotation.z += 0.01;
+  obs.rotation.y += 0.01;
+  obs.rotation.z += 0.01;
+  obs.rotation.x += 0.02;
+  ped.rotation.y += 0.01;
+  ped.rotation.x += 0.01;
+  ped.rotation.z += 0.02;
   camera.position.z = t * -0.05;
   camera.position.x = t * -0.0020;
   camera.rotation.y = t * -0.0002;
@@ -37080,7 +37094,11 @@ function animate() {
   mete.rotation.x += 0.002;
   jeff.rotation.x += 0.003;
   planetx.rotation.x += 0.002;
-  planetz.rotation.x += 0.003; // controls.update();
+  planetz.rotation.x += 0.003;
+  obs.rotation.x += 0.003;
+  obs.rotation.y += 0.001;
+  ped.rotation.x += 0.003;
+  ped.rotation.z += 0.001; // controls.update();
 
   renderer.render(scene, camera);
 }
@@ -37114,7 +37132,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51777" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62837" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

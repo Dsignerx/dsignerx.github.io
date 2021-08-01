@@ -97,7 +97,7 @@ scene.add(mete);
 
 const planetxTexture = new THREE.TextureLoader().load('/city.jpg');
 
-const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 2000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
+const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(6, 6, 20,6), new THREE.MeshBasicMaterial({ map: planetxTexture }));
 
 scene.add(planetx);
 
@@ -120,9 +120,18 @@ scene.add(planetz);
 
 const obsTexture = new THREE.TextureLoader().load('/ground.jpg');
 
-const obs = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 3000), new THREE.MeshBasicMaterial({ map: obsTexture }));
+const obs = new THREE.Mesh(new THREE.TorusKnotGeometry(2, 2, 10, 10), new THREE.MeshBasicMaterial({ map: obsTexture }));
 
 scene.add(obs);
+
+//avatar6
+
+const pedTextured = new THREE.TextureLoader().load('ground.jpg');
+
+const ped = new THREE.Mesh(new THREE.TorusKnotGeometry(2, 2, 13,10), new THREE.MeshBasicMaterial({ map: obsTexture
+}));
+
+scene.add(ped);
 
 
 
@@ -151,9 +160,9 @@ jeff.position.y = 1;
 mete.position.z = -75;
 mete.position.x = 50;
 
-planetx.position.z = -105;
-planetx.position.x = 110;
-planetx.position.y = 1
+planetx.position.z = -100;
+planetx.position.x = 100;
+planetx.position.y = 5
 
 /**jeff.position.z = -5.5;
 jeff.position.x = 1;
@@ -165,8 +174,11 @@ planetx.position.x = 110;
 planetz.position.z = 200;
 planetz.position.x = -58; 
 
-obs.position.z = 110;
-obs.position.x = -78;
+obs.position.z = 57;
+obs.position.x = -48;
+
+ped.position.z = 95;
+ped.position.x = -34
 
 
 
@@ -190,6 +202,14 @@ function moveCamera() {
 
   planetz.rotation.y += 0.02;
   planetz.rotation.z += 0.01;
+
+  obs.rotation.y += 0.01;
+  obs.rotation.z += 0.01;
+  obs.rotation.x += 0.02;
+
+  ped.rotation.y += 0.01;
+  ped.rotation.x += 0.01;
+  ped.rotation.z += 0.02;
 
  
 
@@ -220,6 +240,12 @@ function animate() {
   planetx.rotation.x += 0.002;
 
   planetz.rotation.x += 0.003;
+
+  obs.rotation.x += 0.003;
+  obs.rotation.y += 0.001;
+
+  ped.rotation.x += 0.003;
+  ped.rotation.z += 0.001;
 
   
 
