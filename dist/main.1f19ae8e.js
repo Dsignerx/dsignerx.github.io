@@ -36972,7 +36972,7 @@ function addstar() {
   var star = new THREE.Mesh(geometry, material);
 
   var _Array$fill$map = Array(3).fill().map(function () {
-    return THREE.MathUtils.randFloatSpread(800);
+    return THREE.MathUtils.randFloatSpread(700);
   }),
       _Array$fill$map2 = _slicedToArray(_Array$fill$map, 3),
       x = _Array$fill$map2[0],
@@ -37053,9 +37053,9 @@ planetx.position.x = 110;
 planetz.position.z = 200;
 planetz.position.x = -58;
 obs.position.z = 57;
-obs.position.x = -48;
+obs.position.x = -40;
 ped.position.z = 95;
-ped.position.x = -34; // Scroll Animation
+ped.position.x = -28; // Scroll Animation
 
 function moveCamera() {
   var t = document.body.getBoundingClientRect().top;
@@ -37132,7 +37132,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62837" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

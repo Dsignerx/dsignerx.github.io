@@ -44,7 +44,9 @@ const pointLight4 = new THREE.PointLight(0x3200fe);
 pointLight4.position.set(95,55,55);
 
 
+
 const ambientLight = new THREE.AmbientLight(0xffffff);
+
 scene.add(pointLight, ambientLight, pointLight2, pointLight3,pointLight4);
 
 // Helpers
@@ -63,7 +65,7 @@ function addstar() {
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(800));
+    .map(() => THREE.MathUtils.randFloatSpread(700));
 
   star.position.set(x, y, z);
   scene.add(star);
@@ -175,10 +177,10 @@ planetz.position.z = 200;
 planetz.position.x = -58; 
 
 obs.position.z = 57;
-obs.position.x = -48;
+obs.position.x = -40;
 
 ped.position.z = 95;
-ped.position.x = -34
+ped.position.x = -28
 
 
 
