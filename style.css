@@ -31,7 +31,12 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1{
+  font-size: 80px;
+  font-family: brandon-grotesque, sans-serif;
+}
+
+h2, h3, blockquote {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -52,6 +57,8 @@ canvas {
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
+    line-height: 1.5;
+    margin-top: 200px;
   }
 
   section {
@@ -83,14 +90,6 @@ canvas {
     grid-column: 6 / 12;
   }
 
-  .footer1{
 
-    color: black;
-    background-color: #ffffff5d;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1.4;
-
-  }
 
   
