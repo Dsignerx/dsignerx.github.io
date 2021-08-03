@@ -90,6 +90,12 @@ canvas {
     grid-column: 6 / 12;
   }
 
+  .audio{ 
+   
+   z-index: 3;
+
+  }
+
 
 
   
