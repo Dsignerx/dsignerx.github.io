@@ -36938,8 +36938,8 @@ var renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(10);
-camera.position.setX(-3);
+camera.position.setZ(50);
+camera.position.setX(-53);
 renderer.render(scene, camera); // Torus
 
 var geometry = new THREE.TorusGeometry(25, 2, 16, 100, 7, 25);
@@ -36988,20 +36988,20 @@ Array(200).fill().forEach(addstar); // Background
 var spaceTexture = new THREE.TextureLoader().load('/background.jpg');
 scene.background = spaceTexture; // Avatar
 
-var jeffTexture = new THREE.TextureLoader().load('/city.jpg');
-var jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 60, 1000, 30, 15, 70, 700), new THREE.MeshBasicMaterial({
+var jeffTexture = new THREE.TextureLoader().load('/planetaz.jpg');
+var jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 300, 100, 50), new THREE.MeshBasicMaterial({
   map: jeffTexture
 }));
 scene.add(jeff); // Avatar2
 
 var meteTexture = new THREE.TextureLoader().load('/ground.jpg');
-var mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50, 300), new THREE.MeshBasicMaterial({
+var mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50, 30, 50), new THREE.MeshBasicMaterial({
   map: meteTexture
 }));
 scene.add(mete); // Avatar 3
 
 var planetxTexture = new THREE.TextureLoader().load('/purpple.jpg');
-var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 1000, 60, 15, 70, 700), new THREE.MeshBasicMaterial({
+var planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 80, 1000, 60, 15, 70, 700), new THREE.MeshBasicMaterial({
   map: planetxTexture
 }));
 scene.add(planetx); //Avatar 4
@@ -37047,8 +37047,8 @@ function moveCamera() {
   planetz.rotation.y += 0.02;
   planetz.rotation.z += 0.01;
   camera.position.z = t * -0.05;
-  camera.position.x = t * -0.0020;
-  camera.rotation.y = t * -0.0002;
+  camera.position.x = t * -0.0010;
+  camera.rotation.y = t * -0.0005;
   /**camera.rotation.x= tiempo * segundos */
 }
 
@@ -37062,7 +37062,7 @@ function animate() {
   torus.rotation.z += 0.01;
   moon.rotation.x += 0.005;
   mete.rotation.x += 0.002;
-  jeff.rotation.x += 0.003;
+  jeff.rotation.x += 0.0001;
   planetx.rotation.x += 0.002;
   planetz.rotation.x += 0.003; // controls.update();
 
@@ -37098,7 +37098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63926" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

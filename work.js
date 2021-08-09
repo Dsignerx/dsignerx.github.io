@@ -15,8 +15,8 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(10);
-camera.position.setX(-3);
+camera.position.setZ(50);
+camera.position.setX(-53);
 
 renderer.render(scene, camera);
 
@@ -79,9 +79,9 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load('/city.jpg');
+const jeffTexture = new THREE.TextureLoader().load('/planetaz.jpg');
 
-const jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 60, 1000,30,15,70,700), new THREE.MeshBasicMaterial({ map: jeffTexture }));
+const jeff = new THREE.Mesh(new THREE.SphereGeometry(10, 300, 100,50), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
 scene.add(jeff);
 
@@ -89,7 +89,7 @@ scene.add(jeff);
 
 const meteTexture = new THREE.TextureLoader().load('/ground.jpg');
 
-const mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50,300), new THREE.MeshBasicMaterial({ map: meteTexture }));
+const mete = new THREE.Mesh(new THREE.IcosahedronGeometry(8, 60, 30, 50,30, 50), new THREE.MeshBasicMaterial({ map: meteTexture }));
 
 scene.add(mete);
 
@@ -97,7 +97,7 @@ scene.add(mete);
 
 const planetxTexture = new THREE.TextureLoader().load('/purpple.jpg');
 
-const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 60, 1000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
+const planetx = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 80, 1000,60,15,70,700), new THREE.MeshBasicMaterial({ map: planetxTexture }));
 
 scene.add(planetx);
 
@@ -173,8 +173,8 @@ function moveCamera() {
  
 
   camera.position.z = t * -0.05;
-  camera.position.x = t * -0.0020;
-  camera.rotation.y = t * -0.0002;
+  camera.position.x = t * -0.0010;
+  camera.rotation.y = t * -0.0005;
   /**camera.rotation.x= tiempo * segundos */
 }
 
@@ -194,7 +194,7 @@ function animate() {
 
   mete.rotation.x += 0.002;
 
-  jeff.rotation.x += 0.003;
+  jeff.rotation.x += 0.0001;
 
   planetx.rotation.x += 0.002;
 
