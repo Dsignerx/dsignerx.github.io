@@ -65,6 +65,9 @@ canvas {
     margin-bottom: var(--spacing);
     line-height: 1.5;
     margin-top: 200px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid;
   }
 
   section {
