@@ -16,8 +16,17 @@
     "http-serve": "^1.0.1",
     "three": "^0.128.0"
   },
-  "description": "",
   "main": "main.js",
   "author": "DsignerX",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dsignerx/dsignerx.github.io.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Dsignerx/dsignerx.github.io/issues"
+  },
+  "homepage": "https://github.com/Dsignerx/dsignerx.github.io#readme",
+  "description": ""
 }
