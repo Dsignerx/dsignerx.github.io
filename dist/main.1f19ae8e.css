@@ -8,7 +8,7 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(11, 0, 31, 0.733);
+  --dark-bg: rgba(252, 250, 255, 0.534);
   --spacing: 350px;
 
   font-family: Poppins, sans-serif;
@@ -32,8 +32,9 @@ main {
 }
 
 h1{
-  font-size: 80px;
+  font-size: 60px;
   font-family: Poppins, sans-serif;
+  font-weight: 200;
 }
 
 h2, h3, blockquote {
