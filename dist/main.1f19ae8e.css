@@ -8,7 +8,7 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(252, 250, 255, 0.253);
+  --dark-bg: rgba(252, 250, 255, 0.103);
   --spacing: 350px;
 
   font-family: Poppins, sans-serif;
