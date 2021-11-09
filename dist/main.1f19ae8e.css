@@ -69,8 +69,8 @@ canvas {
     margin-top: 200px;
     backdrop-filter: blur(5px);
     border-radius: 15px;
-    border: 1px solid;
-    border-color: rgba(146, 106, 184, 0.342);
+    border: 2px solid;
+    border-color: rgba(255, 255, 255, 0.377);
   }
 
   section {
@@ -80,10 +80,10 @@ canvas {
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
-    backdrop-filter: blur(3.5px);
+    backdrop-filter: blur(2.5px);
     border-radius: 15px;
-    border: 1px solid ;
-    border-color: rgba(146, 106, 184, 0.342);
+    border: 2px solid ;
+    border-color: rgba(255, 255, 255, 0.425);
   }
 
   blockquote {
