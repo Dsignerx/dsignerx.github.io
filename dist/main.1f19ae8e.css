@@ -80,6 +80,7 @@ canvas {
     backdrop-filter: blur(5px);
     border-radius: 15px;
     border: 1px solid;
+    border-color: rgba(146, 106, 184, 0.342);
   }
 
   blockquote {
