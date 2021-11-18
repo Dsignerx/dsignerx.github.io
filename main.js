@@ -76,7 +76,7 @@ Array(200).fill().forEach(addstar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/backgroundff.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/lubo.jpg');
 scene.background = spaceTexture;
 
 // Avatar
